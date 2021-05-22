@@ -12,14 +12,14 @@ const HomeScreen = ({ navigation }) => {
 
             <View style={styles.header}>
                 <Image style={styles.image} source={require("../images/plant.png")} />
-                <Text style={styles.headerText}>Monitoring status</Text>
             </View>
 
-            <View stlye={{
-                width: width * 0.4, height: height * 0.35, borderColor: "black",
-                borderColor: "black"
-            }}>
-                <Text>Ovo je velika kartica</Text>
+            <View style={styles.floatingCard}>
+                <Image style={{ marginLeft: 2, marginTop: 15, width: 130, height: 110 }} source={require("../images/cloud.png")} />
+                <View style={{ marginTop: 30 }}>
+                    <Text style={styles.degreeText}> 22° Rain</Text>
+                    <Text style={styles.windText}> Wind 8km/h</Text>
+                </View>
             </View>
 
             <View style={styles.whiteContainer}>
@@ -27,6 +27,8 @@ const HomeScreen = ({ navigation }) => {
                     data={[Data[0], Data[1]]}
                     keyExtractor={(item) => item.id}
                     showsVerticalScrollIndicator={false}
+                    bounces={false}
+                    snapToAlignment={true}
                     renderItem={({ item }) => {
                         return (
                             <SquareCard picture={item.picture} temperature={item.temperature} status={item.status} />
@@ -36,6 +38,8 @@ const HomeScreen = ({ navigation }) => {
                 <FlatList
                     data={[Data[2], Data[3]]}
                     keyExtractor={(item) => item.id}
+                    bounces={false}
+                    snapToAlignment={true}
                     showsVerticalScrollIndicator={false}
                     renderItem={({ item }) => {
                         return (
@@ -55,29 +59,55 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 
+    floatingCard: {
+        width: width * 0.6,
+        height: height * 0.2,
+        position: "absolute",
+        top: 80,
+        marginHorizontal: 70,
+        backgroundColor: "white",
+        borderRadius: 20,
+        flexDirection: "row",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 8
+        },
+        shadowOpacity: .7,
+        shadowRadius: 12,
+    },
+
+
+    degreeText: {
+        fontSize: 22,
+        fontFamily: "TrendaSemibold",
+        marginBottom: 35
+    },
+
+
+    windText: {
+        fontFamily: "TrendaSemibold",
+        fontSize: 15,
+        marginRight: 10
+    },
+
+
     header: {
         width: width,
         height: height * 0.3,
-        borderWidth: 1,
-        borderColor: "black",
         flexDirection: "row",
         justifyContent: "flex-end"
     },
 
-    headerText: {
-        fontSize: 28,
-        fontFamily: "TrendaSemibold",
-        marginRight: 10,
-        marginTop: height * 0.03
-    },
 
     whiteContainer: {
         width: width,
         height: height * 0.6,
         backgroundColor: "white",
-        borderTopLeftRadius: 18,
-        borderTopRightRadius: 18,
-        flexDirection: "row"
+        borderTopLeftRadius: 35,
+        borderTopRightRadius: 35,
+        flexDirection: "row",
+        paddingTop: 20
     },
 
     image: {

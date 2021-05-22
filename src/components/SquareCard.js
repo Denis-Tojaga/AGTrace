@@ -67,14 +67,14 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         width: "40%",
         height: "100%",
-        marginLeft: 10,
+        marginLeft: 5,
         justifyContent: "center",
         alignItems: "center"
     },
 
     temperatureText: {
         fontSize: 33,
-        fontFamily: "TrendaRegular",
+        fontFamily: "TrendaSemibold",
         marginBottom: 40
     },
 
