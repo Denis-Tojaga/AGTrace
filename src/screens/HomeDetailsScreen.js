@@ -18,17 +18,17 @@ const HomeDetailsScreen = ({ navigation }) => {
             <Entypo style={{left:'135%'}}name="chevron-thin-right" size={24} color="black" />
             </View>
             <Text>--------------------------------------------------------------------------------------</Text>
-            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Worker</Text>
-            <Text style={styles.TextInfo2}>Denis Tojaga</Text>
+            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Trailer</Text>
+            <Text style={styles.TextInfo2}>Trailer #1</Text>
             </View>
             
-            <View style={styles.GreenBox}><Text style={styles.TextInfo}>KGs</Text>
-            <Text style={styles.TextInfo2}>79kg</Text></View>
-            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Payment</Text>
-            <Text style={styles.TextInfo2}>9.48 BAM</Text></View>
+            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Last load capacity</Text>
+            <Text style={styles.TextInfo2}>1,5t</Text></View>
+            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Last load start</Text>
+            <Text style={styles.TextInfo2}>11:00AM</Text></View>
             <View style={styles.GreenBox}>
-            <Text style={styles.TextInfo}>Category</Text>
-            <Text style={styles.TextInfo2}>Apple</Text>
+            <Text style={styles.TextInfo}>Last load finish</Text>
+            <Text style={styles.TextInfo2}>12:00AM</Text>
             </View>
             </View>
             <View style={styles.Second}>
@@ -40,16 +40,16 @@ const HomeDetailsScreen = ({ navigation }) => {
             <Entypo style={{left:'135%'}}name="chevron-thin-right" size={24} color="black" />
             </View>
             <Text>--------------------------------------------------------------------------------------</Text>
-            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Worker</Text>
-            <Text style={styles.TextInfo2}>Emina Handžić</Text>
+            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Trailer</Text>
+            <Text style={styles.TextInfo2}>Trailer #2</Text>
             </View>
-            <View style={styles.GreenBox}><Text style={styles.TextInfo}>KGs</Text>
-            <Text style={styles.TextInfo2}>123kg</Text></View>
-            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Payment</Text>
-            <Text style={styles.TextInfo2}>14.76 BAM</Text></View>
+            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Last load capacity</Text>
+            <Text style={styles.TextInfo2}>1,5t</Text></View>
+            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Last load start</Text>
+            <Text style={styles.TextInfo2}>12:00AM</Text></View>
             <View style={styles.GreenBox}>
-            <Text style={styles.TextInfo}>Category</Text>
-            <Text style={styles.TextInfo2}>Grape</Text>
+            <Text style={styles.TextInfo}>Last load finish</Text>
+            <Text style={styles.TextInfo2}>13:00AM</Text>
             </View>
             </View>
             <View style={styles.Third}>
@@ -61,16 +61,16 @@ const HomeDetailsScreen = ({ navigation }) => {
             <Entypo style={{left:'135%'}}name="chevron-thin-right" size={24} color="black" />
             </View>
             <Text>--------------------------------------------------------------------------------------</Text>
-            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Worker</Text>
-            <Text style={styles.TextInfo2}>Sanel Novalić</Text>
+            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Trailer</Text>
+            <Text style={styles.TextInfo2}>Trailer #3</Text>
             </View>
-            <View style={styles.GreenBox}><Text style={styles.TextInfo}>KGs</Text>
-            <Text style={styles.TextInfo2}>225kg</Text></View>
-            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Payment</Text>
-            <Text style={styles.TextInfo2}>27 BAM</Text></View>
+            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Last load capacity</Text>
+            <Text style={styles.TextInfo2}>2t</Text></View>
+            <View style={styles.GreenBox}><Text style={styles.TextInfo}>Last load start</Text>
+            <Text style={styles.TextInfo2}>14:00AM</Text></View>
             <View style={styles.GreenBox}>
-            <Text style={styles.TextInfo}>Category</Text>
-            <Text style={styles.TextInfo2}>Strawberries</Text>
+            <Text style={styles.TextInfo}>Last load finish</Text>
+            <Text style={styles.TextInfo2}>16:00AM</Text>
             </View>
             </View>
             
@@ -90,25 +90,24 @@ const styles = StyleSheet.create({
         height:'30%',
         top:'12%',
         left:'10%',
-        backgroundColor:'rgba(247,250,233,0.2)',
-        borderRadius:22,
-        
+        backgroundColor:'rgba(247,250,233,0.5)',
+        borderRadius:50
     },
     Second:{
         width:'80%',
         height:'30%',
         top:'18%',
         left:'10%',
-        backgroundColor:'rgb(234,250,176)',
-        borderRadius:50,
+        backgroundColor:'rgba(247,250,233,0.5)',
+        borderRadius:50
     },
     Third:{
         width:'80%',
         height:'30%',
         top:'24%',
         left:'10%',
-        backgroundColor:'rgb(234,250,176)',
-        borderRadius:50,
+        backgroundColor:'rgba(247,250,233,0.5)',
+        borderRadius:50
     },
     FirstFirst:{
         width:'50%',
@@ -120,7 +119,7 @@ const styles = StyleSheet.create({
     GreenBox:{
         width:'90%',
         backgroundColor:'rgba(74,151,21,0.2)',
-        height:'12%',
+        height:'18%',
         left:'5%',
         borderRadius:10,
         margin:"1%",

@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
         height: '100%',
         backgroundColor: 'white'
     },
+<<<<<<< Updated upstream
     First: {
         width: '80%',
         height: '30%',
@@ -116,6 +117,32 @@ const styles = StyleSheet.create({
         left: '10%',
         backgroundColor: 'rgb(234,250,176)',
         borderRadius: 50,
+=======
+    First:{
+        width:'80%',
+        height:'30%',
+        top:'15%',
+        left:'10%',
+        backgroundColor:'rgba(247,250,233,0.5)',
+        borderRadius:50
+        
+    },
+    Second:{
+        width:'80%',
+        height:'30%',
+        top:'20%',
+        left:'10%',
+        backgroundColor:'rgba(247,250,233,0.5)',
+        borderRadius:50
+    },
+    Third:{
+        width:'80%',
+        height:'30%',
+        top:'25%',
+        left:'10%',
+        backgroundColor:'rgba(247,250,233,0.5)',
+        borderRadius:50
+>>>>>>> Stashed changes
     },
     FirstFirst: {
         width: '50%',
@@ -124,6 +151,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center'
     },
+<<<<<<< Updated upstream
     GreenBox: {
         width: '90%',
         backgroundColor: 'rgba(74,151,21,0.7)',
@@ -133,6 +161,17 @@ const styles = StyleSheet.create({
         margin: "1%",
         flexDirection: 'row',
         alignItems: 'center'
+=======
+    GreenBox:{
+        width:'90%',
+        backgroundColor:'rgba(218,233,208,0.4)',
+        height:'12%',
+        left:'5%',
+        borderRadius:10,
+        margin:"1%",
+        flexDirection:'row',
+        alignItems:'center'
+>>>>>>> Stashed changes
     },
     TextInfo: {
         left: '45%',
