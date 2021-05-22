@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
     backgroundImage: {
         width: width,
         height: height,
-        opacity: .6
     },
 
     logo: {
@@ -53,11 +52,11 @@ const styles = StyleSheet.create({
     button: {
         borderRadius: 20,
         backgroundColor: "#CEB01A",
-        width: width * 0.7,
+        width: width * 0.8,
         height: 60,
         justifyContent: "center",
         alignItems: "center",
-        marginLeft: width * 0.15,
+        marginLeft: 40,
         marginBottom: 20,
         shadowColor: "#000",
         shadowOffset: {
