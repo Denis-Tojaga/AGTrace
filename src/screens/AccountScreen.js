@@ -9,6 +9,7 @@ import { navigate } from "../helpers/navigation";
 const AccountScreen = () => {
 
     return (
+
         <SafeAreaView style={styles.container}>
             <View style={styles.Me}>
             <View style={styles.Me2}>

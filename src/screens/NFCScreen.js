@@ -1,8 +1,9 @@
 import React from "react";
+
 import { StyleSheet, View, Text ,SafeAreaView,Image, ScrollView} from "react-native";
 import { Entypo } from '@expo/vector-icons'; 
 
-const NFCScreen = ({ navigation }) => {
+const NFCScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
@@ -145,6 +146,13 @@ const styles = StyleSheet.create({
        flex:1
     },
 });
+
+
+
+NFCScreen.navigationOptions = {
+    title: "NFC",
+    tabBarIcon: <MaterialCommunityIcons name="cellphone-nfc" size={24} color="black" />
+};
 
 
 export default NFCScreen;
