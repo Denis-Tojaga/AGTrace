@@ -8,6 +8,14 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 import WelcomeScreen from "./src/screens/WelcomeScreen";
 import SigninScreen from "./src/screens/SigninScreen";
 import SignupScreen from "./src/screens/SignupScreen";
+import HomeScreen from "./src/screens/HomeScreen";
+import HomeDetailsScreen from "./src/screens/HomeDetailsScreen";
+import NFCScreen from "./src/screens/NFCScreen";
+import AccountScreen from "./src/screens/AccountScreen";
+
+//importing NavigationActions reference 
+import { navigate, setNavigator } from "./src/helpers/navigation";
+
 
 
 //Importing fonts hook
@@ -18,14 +26,33 @@ import { useFonts } from "@use-expo/font";
 
 
 
+const loginFlow = createStackNavigator({
+  Welcome: WelcomeScreen,
+  Signin: SigninScreen,
+  Signup: SignupScreen
+});
+
+
+const homeFlow = createStackNavigator({
+  Home: HomeScreen,
+  HomeDetails: HomeDetailsScreen
+});
+
+
+const bottomTabFlow = createBottomTabNavigator({
+  homeFlow: homeFlow,
+  NFC: NFCScreen,
+  Account: AccountScreen
+}, {
+  initialRouteName: "homeFlow"
+});
 
 
 
 //navigator component which will have all navigators nested
-const navigator = createStackNavigator({
-  Welcome: WelcomeScreen,
-  Signin: SigninScreen,
-  Signup: SignupScreen
+const navigator = createSwitchNavigator({
+  loginFlow: loginFlow,
+  bottomTabFlow: bottomTabFlow
 });
 
 
@@ -60,7 +87,7 @@ export default () => {
 
   return (
     //this sets the navigator variable to the global navigator from where we have access to all screens
-    <App />
+    <App ref={(navigator) => { setNavigator(navigator) }} />
   );
 }
 

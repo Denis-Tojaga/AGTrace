@@ -2,11 +2,11 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
 
-const AccountScreen = () => {
+const HomeDetailsScreen = ({ navigation }) => {
 
     return (
         <View>
-            <Text>This is AccountScreen screen</Text>
+            <Text>This is HomeDetailsScreen screen</Text>
         </View>
     );
 };
@@ -15,4 +15,4 @@ const AccountScreen = () => {
 const styles = StyleSheet.create({});
 
 
-export default AccountScreen;
+export default HomeDetailsScreen;
