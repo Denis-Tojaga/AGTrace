@@ -1,8 +1,9 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
-const NFCScreen = ({ navigation }) => {
+const NFCScreen = () => {
 
     return (
         <View>
@@ -13,6 +14,13 @@ const NFCScreen = ({ navigation }) => {
 
 
 const styles = StyleSheet.create({});
+
+
+
+NFCScreen.navigationOptions = {
+    title: "NFC",
+    tabBarIcon: <MaterialCommunityIcons name="cellphone-nfc" size={24} color="black" />
+};
 
 
 export default NFCScreen;

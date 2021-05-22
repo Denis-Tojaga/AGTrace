@@ -2,6 +2,7 @@ import React from "react";
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import { createBottomTabNavigator } from "react-navigation-tabs";
+import { AntDesign } from '@expo/vector-icons';
 
 
 //all screens importing
@@ -38,6 +39,11 @@ const homeFlow = createStackNavigator({
   Home: HomeScreen,
   HomeDetails: HomeDetailsScreen
 });
+
+homeFlow.navigationOptions = {
+  title: "Home",
+  tabBarIcon: <AntDesign name="home" size={30} color="black" />
+}
 
 
 const bottomTabFlow = createBottomTabNavigator({

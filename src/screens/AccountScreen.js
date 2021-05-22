@@ -7,6 +7,7 @@ const AccountScreen = () => {
     return (
         <View>
             <Text>This is AccountScreen screen</Text>
+
         </View>
     );
 };

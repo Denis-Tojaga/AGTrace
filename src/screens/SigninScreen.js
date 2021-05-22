@@ -1,6 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, Button, SafeAreaView, Image, Dimensions, TextInput, TouchableOpacity } from "react-native";
-import { navigate } from "../helpers/navigation";
+import { StyleSheet, View, Text, SafeAreaView, Image, Dimensions, TextInput, TouchableOpacity } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -15,7 +14,7 @@ const SigninScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <LinearGradient style={{ flex: 1 }} colors={["#58C70B", "#000000"]} start={{ x: 0.5, y: 0.2 }} end={{ x: 0.5, y: 1.5 }}>
-                <TouchableOpacity onPress={() => navigation.goBack()}>
+                <TouchableOpacity style={{ width: 80, height: 70 }} onPress={() => navigation.goBack()}>
                     <AntDesign name="arrowleft" style={styles.icon} />
                 </TouchableOpacity>
                 <Image style={styles.logo} source={require("../images/logo2.png")} />
