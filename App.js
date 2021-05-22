@@ -2,6 +2,7 @@ import React from "react";
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import { createBottomTabNavigator } from "react-navigation-tabs";
+import { AntDesign } from '@expo/vector-icons';
 
 
 //all screens importing
@@ -20,8 +21,9 @@ import { navigate, setNavigator } from "./src/helpers/navigation";
 
 //Importing fonts hook
 import { useFonts } from "@use-expo/font";
+import { useEffect } from "react/cjs/react.production.min";
 //Importing AppLoading component if something doesn't load correctly
-//import AppLoading from "expo-app-loading";
+import AppLoading from "expo-app-loading";
 //importing API keys which we are going to use to initialize out firebase 
 
 
@@ -38,10 +40,15 @@ const homeFlow = createStackNavigator({
   HomeDetails: HomeDetailsScreen
 });
 
+homeFlow.navigationOptions = {
+  title: "Home",
+  tabBarIcon: <AntDesign name="home" size={30} color="black" />
+}
+
 
 const bottomTabFlow = createBottomTabNavigator({
-  homeFlow: homeFlow,
   NFC: NFCScreen,
+  homeFlow: homeFlow,
   Account: AccountScreen
 }, {
   initialRouteName: "homeFlow"
@@ -81,8 +88,8 @@ export default () => {
   const [isLoaded] = useFonts(customFonts);
 
   //if fonts are not loaded it will show loading icon
-  // if (!isLoaded)
-  //   return <AppLoading />
+  if (!isLoaded)
+    return <AppLoading />
 
 
   return (
