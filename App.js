@@ -51,7 +51,11 @@ const bottomTabFlow = createBottomTabNavigator({
   homeFlow: homeFlow,
   Account: AccountScreen
 }, {
-  initialRouteName: "homeFlow"
+  initialRouteName: "homeFlow",
+  tabBarOptions: {
+    activeTintColor: "#5EAF26",
+    inactiveTintColor: "black"
+  }
 });
 
 

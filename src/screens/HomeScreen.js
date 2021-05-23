@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text, Button, SafeAreaView, Dimensions, Image, FlatList } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import SquareCard from "../components/SquareCard";
 import Data from "../helpers/Data.js";
 
@@ -31,7 +32,9 @@ const HomeScreen = ({ navigation }) => {
                     snapToAlignment={true}
                     renderItem={({ item }) => {
                         return (
-                            <SquareCard picture={item.picture} temperature={item.temperature} status={item.status} />
+                            <TouchableOpacity onPress={() => navigation.navigate("HomeDetails")}>
+                                <SquareCard picture={item.picture} temperature={item.temperature} status={item.status} />
+                            </TouchableOpacity>
                         );
                     }}
                 />
@@ -43,7 +46,9 @@ const HomeScreen = ({ navigation }) => {
                     showsVerticalScrollIndicator={false}
                     renderItem={({ item }) => {
                         return (
-                            <SquareCard picture={item.picture} temperature={item.temperature} status={item.status} />
+                            <TouchableOpacity onPress={() => navigation.navigate("HomeDetails")}>
+                                <SquareCard picture={item.picture} temperature={item.temperature} status={item.status} />
+                            </TouchableOpacity>
                         );
                     }}
                 />
@@ -62,6 +67,7 @@ const styles = StyleSheet.create({
     floatingCard: {
         width: width * 0.6,
         height: height * 0.2,
+        paddingLeft: 5,
         position: "absolute",
         top: 80,
         marginHorizontal: 70,
@@ -79,16 +85,17 @@ const styles = StyleSheet.create({
 
 
     degreeText: {
-        fontSize: 22,
+        fontSize: 20,
         fontFamily: "TrendaSemibold",
+        fontWeight: "800",
         marginBottom: 35
     },
 
 
     windText: {
         fontFamily: "TrendaSemibold",
-        fontSize: 15,
-        marginRight: 10
+        fontSize: 14,
+        marginRight: 15
     },
 
 

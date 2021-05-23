@@ -10,7 +10,7 @@ const { width, height } = Dimensions.get("screen");
 const SignupScreen = ({ navigation }) => {
 
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
             <LinearGradient style={{ flex: 1 }} colors={["#58C70B", "#000000"]} start={{ x: 0.5, y: 0.2 }} end={{ x: 0.5, y: 1.5 }}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                     <AntDesign name="arrowleft" style={styles.icon} />
@@ -51,7 +51,7 @@ const SignupScreen = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
             </LinearGradient>
-        </SafeAreaView>
+        </View>
     );
 };
 
