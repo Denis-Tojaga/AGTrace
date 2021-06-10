@@ -17,5 +17,7 @@
 ## App Images
 
 <img src="AppImages/splash.png" width="250" height="470">  <img src="AppImages/welcome.png" width="250" height="470">
-<img src="AppImages/image3.png" width="250" height="470">  <img src="AppImages/image4.png" width="250" height="470">    
-<img src="AppImages/image5.png" width="250" height="470">
+<img src="AppImages/signUp.png" width="250" height="470">  <img src="AppImages/signIn.png" width="250" height="470">    
+<img src="AppImages/Home.png" width="250" height="470">    <img src="AppImages/NFC.png" width="250" height="470">
+<img src="AppImages/Me.png" width="250" height="470">
+
