@@ -16,6 +16,6 @@
 
 ## App Images
 
-<img src="AppImages/image1.png" width="250" height="470">  <img src="AppImages/image2.png" width="250" height="470">
+<img src="AppImages/splash.png" width="250" height="470">  <img src="AppImages/welcome.png" width="250" height="470">
 <img src="AppImages/image3.png" width="250" height="470">  <img src="AppImages/image4.png" width="250" height="470">    
 <img src="AppImages/image5.png" width="250" height="470">
